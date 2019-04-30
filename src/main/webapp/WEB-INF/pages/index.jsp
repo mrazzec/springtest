@@ -5,6 +5,10 @@
 <body>
 <a href="${pageContext.request.contextPath}/registration">Регистрация</a>
 ${error}
-${user}
+${sessionScope.get("user")}
+${userException}
+<c:forEach var="user" items="${users}">
+    <p>${user.name}</p>
+</c:forEach>
 </body>
 </html>
