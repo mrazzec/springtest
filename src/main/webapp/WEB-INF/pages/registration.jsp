@@ -16,7 +16,7 @@
     <table>
         <table>
             <tr>
-                <td><label>Login:</label></td>
+                <td><label>Name:</label></td>
                 <td>
                     <spring:input path="name" />
                     <spring:errors path="name" cssClass="error"/>

@@ -4,6 +4,9 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .error {color: red}
+    </style>
 </head>
 <body>
 <c:out value="${userException}"/>
@@ -12,9 +15,10 @@
         <table>
             <table>
                 <tr>
-                    <td><label>Login:</label></td>
+                    <td><label>Email:</label></td>
                     <td>
                         <spring:input path="email" />
+                        <spring:errors path="email" cssClass="error" />
                     </td>
 
                 </tr>
@@ -23,6 +27,7 @@
                     <td><label>Pass:</label></td>
                     <td>
                         <spring:input path="pass" />
+                        <spring:errors path="pass" cssClass="error" />
                     </td>
 
                 </tr>

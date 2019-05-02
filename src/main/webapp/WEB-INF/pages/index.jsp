@@ -3,7 +3,17 @@
 <%@page pageEncoding="UTF-8"%>
 <html>
 <body>
+<c:if test="${user == null}">
 <a href="${pageContext.request.contextPath}/registration">Регистрация</a>
+<a href="${pageContext.request.contextPath}/login">Вход</a>
+</c:if>
+
+<c:if test="${user != null}">
+<a href="${pageContext.request.contextPath}/settings">Настройки</a>
+<a href="${pageContext.request.contextPath}/logout">Выход</a>
+</c:if>
+
+
 ${error}
 ${sessionScope.get("user")}
 ${userException}

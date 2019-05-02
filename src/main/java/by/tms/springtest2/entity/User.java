@@ -3,12 +3,17 @@ package by.tms.springtest2.entity;
 
 import by.tms.springtest2.validation.StartFieldWith;
 
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 import java.util.Objects;
 
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     @StartFieldWith(value = "qx", message = "должно начинаться с qx")
     @Pattern(regexp = "(\\S+).{2,}", message = "мало символов или без пробелов")
@@ -37,6 +42,14 @@ public class User {
         this.pass = pass;
         this.email = email;
         this.age = age;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getEmail() {

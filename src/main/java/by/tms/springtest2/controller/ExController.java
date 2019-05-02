@@ -1,9 +1,7 @@
 package by.tms.springtest2.controller;
 
 import by.tms.springtest2.entity.User;
-import by.tms.springtest2.exceptions.UserAuthorizationException;
 import by.tms.springtest2.exceptions.UserFindException;
-import by.tms.springtest2.exceptions.UserFindServiceException;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
